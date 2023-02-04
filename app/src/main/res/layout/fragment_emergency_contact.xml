@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/bg_window"
+    android:orientation="vertical">
+
+    <one.mixin.android.widget.TitleView
+        android:id="@+id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:need_divider="false"
+        app:rightIcon="@drawable/ic_help_outline"
+        app:titleText="@string/Emergency_Contact" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:background="?attr/bg_white"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="92dp"
+                    android:layout_height="83dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="36dp"
+                    android:layout_marginBottom="20dp"
+                    android:src="?attr/icon_emergency" />
+
+                <TextView
+                    android:id="@+id/tip_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:layout_marginBottom="24dp"
+                    android:gravity="center"
+                    android:lineSpacingExtra="2dp"
+                    android:text="@string/setting_emergency_content"
+                    android:textColor="?attr/text_minor"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/enable_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_contact_height"
+                android:background="?attr/bg_white"
+                android:foreground="?attr/selectableItemBackground">
+
+                <TextView
+                    android:id="@+id/enable_tv"
+                    style="@style/NormalTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:text="@string/Enable_Emergency_Contact"
+                    android:textColor="@color/colorDarkBlue"
+                    tools:ignore="RelativeOverlap" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/view_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_contact_height"
+                android:layout_marginBottom="24dp"
+                android:background="?attr/bg_white"
+                android:foreground="?attr/selectableItemBackground"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/view_tv"
+                    style="@style/NormalTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:text="@string/View_emergency_contact"
+                    tools:ignore="RelativeOverlap" />
+
+                <ProgressBar
+                    android:id="@+id/view_pb"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin16"
+                    android:theme="@style/AppTheme.BlueAccent"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/change_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_contact_height"
+                android:layout_marginBottom="24dp"
+                android:background="?attr/bg_white"
+                android:foreground="?attr/selectableItemBackground"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/change_tv"
+                    style="@style/NormalTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:text="@string/Change_emergency_contact"
+                    tools:ignore="RelativeOverlap" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/delete_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_contact_height"
+                android:background="?attr/bg_white"
+                android:foreground="?attr/selectableItemBackground"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/delete_tv"
+                    style="@style/NormalTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:text="@string/Remove_emergency_contact"
+                    android:textColor="@color/colorRed"
+                    tools:ignore="RelativeOverlap" />
+
+                <ProgressBar
+                    android:id="@+id/delete_pb"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin16"
+                    android:theme="@style/AppTheme.BlueAccent"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

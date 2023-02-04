@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/chat_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="1.5dp"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/chat_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="#19BEF1"
+            android:textSize="15sp"
+            android:maxWidth="280dp"
+            android:minWidth="30dp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chat_name"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/chat_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:maxWidth="300dp"
+                android:text="@string/chat_waiting"
+                android:textColor="?attr/text_primary"
+                android:textSize="14sp" />
+
+            <one.mixin.android.widget.bubble.TimeBubble
+                android:id="@+id/chat_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:drawablePadding="3dp"
+                tools:ignore="SmallSp" />
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

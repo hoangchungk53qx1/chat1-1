@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/top_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/top_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <one.mixin.android.widget.BadgeCircleImageView
+                android:id="@+id/avatar"
+                android:layout_width="51dp"
+                android:layout_height="51dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="16dp"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/avatar"
+                android:layout_marginStart="@dimen/margin12"
+                android:layout_marginEnd="42dp"
+                android:layout_toEndOf="@+id/avatar"
+                android:textIsSelectable="true"
+                android:textSize="14sp"
+                tools:ignore="RelativeOverlap" />
+
+            <TextView
+                android:id="@+id/balance_as"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/balance"
+                android:layout_marginStart="@dimen/margin12"
+                android:layout_marginTop="@dimen/margin12"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="@dimen/margin16"
+                android:layout_toEndOf="@id/avatar"
+                android:textColor="?attr/text_minor" />
+
+            <ImageView
+                android:id="@+id/contract_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="@dimen/margin16"
+                android:src="@drawable/ic_keyboard_arrow_down"
+                tools:ignore="ContentDescription" />
+        </RelativeLayout>
+
+        <one.mixin.android.widget.SendReceiveView
+            android:id="@+id/send_receive_view"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginBottom="@dimen/margin16"
+            android:layout_marginStart="@dimen/margin20"
+            android:layout_marginEnd="@dimen/margin20"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="?attr/bg_window" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/group_info_member_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/top_ll">
+
+        <ImageView
+            android:id="@+id/group_info_member_title_sort"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin12"
+            android:background="@drawable/mixin_ripple_small"
+            android:padding="8dp"
+            android:src="@drawable/ic_sort"
+            android:contentDescription="@string/Sort_by" />
+
+        <TextView
+            android:id="@+id/group_info_member_title"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="8dp"
+            android:layout_toStartOf="@id/group_info_member_title_sort"
+            android:gravity="bottom"
+            android:paddingStart="@dimen/margin20"
+            android:paddingEnd="@dimen/margin20"
+            android:text="@string/Transactions"
+            android:textColor="?attr/text_primary" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/group_info_member_title_layout"
+        android:minHeight="240dp">
+
+        <Space
+            android:id="@+id/center"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:layout_centerInParent="true" />
+
+        <ImageView
+            android:id="@+id/bottom_iv"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_above="@+id/center"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_transactions_empty"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:id="@+id/wallet_transactions_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bottom_iv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin16"
+            android:text="@string/No_transactions"
+            android:textColor="?attr/text_minor" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="1dp"
+    android:paddingBottom="3dp">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="?attr/bg_window" />
+
+    <TextView
+        android:id="@+id/unread_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/bg_white"
+        android:gravity="center"
+        android:padding="3dp"
+        android:textColor="?attr/text_minor"
+        android:textSize="12sp"
+        tools:text="new messages" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="?attr/bg_window" />
+
+</LinearLayout>

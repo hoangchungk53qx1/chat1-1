@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "330819232870",
+    "project_id": "mixin-bd130",
+    "storage_bucket": "mixin-bd130.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:330819232870:android:60c5be930516f7c715f9a7",
+        "android_client_info": {
+          "package_name": "one.mixin.messenger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "330819232870-n5k28eumk986cjria179ptjs04r0ogpq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvLKjq6zHbvnf38ZTdB4R4G8gnQP6Ll54"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "330819232870-n5k28eumk986cjria179ptjs04r0ogpq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

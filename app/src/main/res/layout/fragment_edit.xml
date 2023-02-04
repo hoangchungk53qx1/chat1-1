@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/preview_iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:ignore="ContentDescription" />
+
+    <TextureView
+        android:id="@+id/preview_video_texture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_gravity="center" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_10"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:background="@drawable/camera_cover_top"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/camera_cover_bottom"/>
+
+    <ImageView
+        android:id="@+id/close_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:padding="8dp"
+        android:background="@drawable/mixin_ripple"
+        android:src="@drawable/ic_close_white_24dp"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/download_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="24dp"
+        android:padding="12dp"
+        android:elevation="8dp"
+        android:background="@drawable/bg_circle_white_45"
+        android:src="@drawable/ic_save_white"
+        tools:ignore="ContentDescription" />
+
+    <FrameLayout
+        android:id="@+id/send_fl"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="24dp"
+        android:elevation="8dp"
+        android:background="@drawable/bg_circle_blue">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="8dp"
+            android:src="@drawable/ic_send"
+            tools:ignore="ContentDescription" />
+    </FrameLayout>
+
+    <one.mixin.android.widget.PseudoNotificationView
+        android:id="@+id/pseudo_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"/>
+</RelativeLayout>

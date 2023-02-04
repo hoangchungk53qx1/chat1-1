@@ -1,0 +1,39 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="photo_size">90dp</dimen>
+    <dimen name="min_keyboard_size">50dp</dimen>
+    <dimen name="min_custom_keyboard_size">110dp</dimen>
+    <dimen name="default_custom_keyboard_size">220dp</dimen>
+    <dimen name="min_custom_keyboard_top_margin_portrait">170dp</dimen>
+    <dimen name="item_contact_height">60dp</dimen>
+    <dimen name="item_contact_header_height">30dp</dimen>
+    <dimen name="transfer_item_height">80dp</dimen>
+    <dimen name="chat_date_size">10sp</dimen>
+    <dimen name="item_divider">20dp</dimen>
+    <dimen name="wallet_balance_text">22sp</dimen>
+    <dimen name="wallet_balance_as_text">14sp</dimen>
+    <dimen name="avatar_text_size">22sp</dimen>
+    <dimen name="group_avatar_text_size">34sp</dimen>
+    <dimen name="group_avatar_text_medium">28sp</dimen>
+    <dimen name="group_avatar_text_small">22sp</dimen>
+    <dimen name="bottom_avatar_size">100dp</dimen>
+    <dimen name="bottom_button_height">56dp</dimen>
+    <dimen name="bottom_name_text_size">18sp</dimen>
+    <dimen name="margin20">20dp</dimen>
+    <dimen name="margin16">16dp</dimen>
+    <dimen name="margin12">12dp</dimen>
+    <dimen name="margin10">10dp</dimen>
+    <dimen name="blink_size">8dp</dimen>
+    <dimen name="padding8">8dp</dimen>
+    <dimen name="chat_control_height">52dp</dimen>
+    <dimen name="media_grid_size">48dp</dimen>
+    <dimen name="media_grid_spacing">4dp</dimen>
+    <dimen name="btn_min_height">48dp</dimen>
+
+    <dimen name="album_item_height">72dp</dimen>
+    <dimen name="call_button_size">40dp</dimen>
+    <dimen name="setting_divider">16dp</dimen>
+    <dimen name="bottom_bottom_margin">100dp</dimen>
+</resources>

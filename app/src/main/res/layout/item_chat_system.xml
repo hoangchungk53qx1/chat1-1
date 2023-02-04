@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <one.mixin.android.util.mention.MentionTextView
+        android:id="@+id/chat_info"
+        android:layout_marginTop="1.5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/chat_bubble_info"
+        android:gravity="center"
+        android:maxWidth="300dp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:paddingEnd="12dp"
+        android:paddingStart="12dp"
+        android:textColor="@color/textPrimary"
+        android:textSize="12sp"
+        tools:text="@string/message_e2ee" />
+
+</FrameLayout>
+
+

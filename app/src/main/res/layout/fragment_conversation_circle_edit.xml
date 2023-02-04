@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/bg_window"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+
+    <one.mixin.android.widget.TitleView
+            android:id="@+id/title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:rightText="@string/Save" />
+
+    <one.mixin.android.widget.SearchView
+        android:id="@+id/search_et"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="?attr/bg_white"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/margin_start"
+        android:paddingEnd="@dimen/margin_start"
+        android:drawablePadding="8dp"
+        android:hint="@string/Search"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textColor="?attr/text_primary"
+        android:textColorHint="?attr/text_minor"
+        android:textSize="14sp"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height=".5dp"
+            android:background="?attr/bg_window" />
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/select_rv"
+            android:layout_width="match_parent"
+            android:background="?attr/bg_white"
+            android:layout_height="wrap_content" />
+
+    <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height=".5dp"
+            android:background="?attr/bg_window" />
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/conversation_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+</LinearLayout>

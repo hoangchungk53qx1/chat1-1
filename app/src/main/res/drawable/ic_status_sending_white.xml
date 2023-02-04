@@ -1,0 +1,23 @@
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <aapt:attr name="android:drawable">
+        <vector android:name="vector" android:width="12dp" android:height="12dp" android:viewportWidth="11" android:viewportHeight="11">
+            <path android:pathData="M3 2C2.448 2 2 2.448 2 3v5c0 0.552 0.448 1 1 1h5c0.552 0 1-0.448 1-1V3c0-0.552-0.448-1-1-1H3zm0-1h5c1.105 0 2 0.895 2 2v5c0 1.105-0.895 2-2 2H3c-1.105 0-2-0.895-2-2V3c0-1.105 0.895-2 2-2z" android:fillColor="@color/white"/>
+            <group android:name="hour" android:pivotX="5.5" android:pivotY="5.5">
+                <path android:pathData="M5 3.5C5 3.224 5.224 3 5.5 3S6 3.224 6 3.5v2C6 5.776 5.776 6 5.5 6S5 5.776 5 5.5v-2z" android:fillColor="@color/white"/>
+            </group>
+            <group android:name="minute" android:pivotX="5.5" android:pivotY="5.5">
+                <path android:pathData="M7.273 6.566c0.196 0.196 0.196 0.512 0 0.708-0.195 0.195-0.511 0.195-0.707 0L5.152 5.859c-0.195-0.195-0.195-0.511 0-0.707 0.196-0.195 0.512-0.195 0.707 0l1.414 1.414z" android:fillColor="@color/white"/>
+            </group>
+        </vector>
+    </aapt:attr>
+    <target android:name="hour">
+        <aapt:attr name="android:animation">
+            <objectAnimator android:propertyName="rotation" android:duration="5000" android:valueFrom="0" android:valueTo="1800" android:valueType="floatType" android:repeatMode="restart" android:repeatCount="infinite" android:interpolator="@android:anim/linear_interpolator"/>
+        </aapt:attr>
+    </target>
+    <target android:name="minute">
+        <aapt:attr name="android:animation">
+            <objectAnimator android:propertyName="rotation" android:startOffset="1" android:duration="5000" android:valueFrom="0" android:valueTo="360" android:valueType="floatType" android:repeatMode="restart" android:repeatCount="infinite" android:interpolator="@android:anim/linear_interpolator"/>
+        </aapt:attr>
+    </target>
+</animated-vector>

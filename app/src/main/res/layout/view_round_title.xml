@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/actionBarSize"
+    android:background="@drawable/bg_upper_round">
+
+    <FrameLayout
+        android:id="@+id/left_fl"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/left_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:padding="8dp"
+            android:visibility="gone"
+            android:background="@drawable/mixin_ripple"
+            android:src="@drawable/ic_back"
+            tools:ignore="ContentDescription"/>
+
+        <one.mixin.android.widget.AvatarView
+            android:id="@+id/avatar_iv"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:visibility="gone"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/margin20"
+            android:layout_marginEnd="10dp"/>
+
+        <one.mixin.android.widget.BadgeCircleImageView
+            android:id="@+id/badge_circle_iv"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:visibility="gone"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/margin20"
+            android:layout_marginEnd="10dp"/>
+
+        <ImageView
+            android:id="@+id/address_avatar"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:visibility="gone"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/margin20"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/bg_circle_70_solid_gray"
+            android:padding="6dp"
+            android:src="@drawable/ic_transfer_address"
+            tools:ignore="ContentDescription"/>
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/right_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/margin16"
+        android:src="@drawable/ic_close_black"
+        android:background="@drawable/mixin_ripple"
+        tools:ignore="ContentDescription"/>
+
+    <LinearLayout
+        android:id="@+id/title_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/left_fl"
+        android:orientation="vertical"
+        tools:ignore="RelativeOverlap">
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxWidth="240dp"
+            android:singleLine="true"
+            android:textColor="?attr/text_primary"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/sub_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="240dp"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:visibility="gone"
+            android:textColor="?attr/text_minor"
+            android:textSize="12sp"
+            tools:ignore="SmallSp"/>
+    </LinearLayout>
+</RelativeLayout>

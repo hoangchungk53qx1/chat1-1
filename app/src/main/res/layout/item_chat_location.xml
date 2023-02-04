@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ImageView
+        android:id="@+id/chat_reply"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/bg_circle_reply"
+        android:layout_marginStart="16dp"
+        android:padding="4dp"
+        android:alpha="0"
+        android:scaleX="0"
+        android:scaleY="0"
+        android:src="@drawable/ic_reply_white"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/chat_layout"
+        app:layout_constraintBottom_toBottomOf="@id/chat_layout"
+        tools:ignore="ContentDescription" />
+
+     <ImageView
+        android:id="@+id/chat_jump"
+        android:padding="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/ic_chat_jump"
+        android:foreground="@drawable/jump_ripple"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@id/chat_layout"
+        app:layout_constraintTop_toTopOf="@id/chat_layout"
+        app:layout_constraintBottom_toBottomOf="@id/chat_layout"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/chat_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="1.5dp"
+        android:ellipsize="end"
+        android:gravity="start|center_vertical"
+        android:lines="1"
+        android:minWidth="30dp"
+        android:textColor="#19BEF1"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/chat_layout"
+        app:layout_constraintStart_toStartOf="@id/chat_layout" />
+
+    <LinearLayout
+        android:id="@+id/chat_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="1.5dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chat_name"
+        app:layout_constraintVertical_bias="0"
+        app:layout_goneMarginBottom="0dp">
+
+        <FrameLayout
+            android:id="@+id/chat_content_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="UselessParent">
+
+            <one.mixin.android.widget.InterceptLinearLayout
+                android:id="@+id/location_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clipChildren="true"
+                android:clipToPadding="true"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.gms.maps.MapView
+                        android:id="@+id/google_map"
+                        android:layout_width="260dp"
+                        android:layout_height="180dp"
+                        app:liteMode="true"
+                        app:uiCompass="false"
+                        app:uiMapToolbar="false"
+                        app:uiRotateGestures="false"
+                        app:uiScrollGestures="false"
+                        app:uiScrollGesturesDuringRotateOrZoom="false"
+                        app:uiTiltGestures="false"
+                        app:uiZoomControls="false"
+                        app:uiZoomGestures="false"
+                        app:useViewLifecycle="false"
+                        app:zOrderOnTop="false" />
+
+                    <ViewStub
+                        android:id="@+id/mapbox_stub"
+                        android:layout_width="260dp"
+                        android:layout_height="180dp"
+                        android:inflatedId="@+id/mapbox_stub"
+                        android:layout="@layout/view_mapbox_min"/>
+                </FrameLayout>
+
+                <RelativeLayout
+                    android:id="@+id/location_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:paddingStart="6dp"
+                    android:paddingTop="6dp"
+                    android:paddingEnd="6dp"
+                    android:paddingBottom="6dp">
+
+                    <TextView
+                        android:id="@+id/location_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxWidth="240dp"
+                        android:singleLine="true"
+                        android:textColor="?attr/text_primary"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/location_sub_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/location_title"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="3dp"
+                        android:layout_toStartOf="@id/chat_time"
+                        android:maxWidth="240dp"
+                        android:singleLine="true"
+                        android:textColor="?attr/text_minor"
+                        android:textSize="12sp"
+                        android:visibility="invisible" />
+
+                    <one.mixin.android.widget.bubble.TimeBubble
+                        android:id="@+id/chat_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="bottom|end" />
+                </RelativeLayout>
+            </one.mixin.android.widget.InterceptLinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

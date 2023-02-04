@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <View
+        android:id="@+id/center"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_centerInParent="true"/>
+
+    <CheckBox
+        android:id="@+id/cb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/margin20"
+        android:clickable="false"
+        android:button="@drawable/selector_item_asset_add"
+        android:background="@null"
+        tools:ignore="ContentDescription"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin20"
+        android:layout_marginBottom="2dp"
+        android:layout_toEndOf="@id/cb"
+        android:layout_above="@id/center"
+        android:textColor="?attr/text_primary"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textSize="16sp"
+        tools:ignore="RelativeOverlap" />
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/center"
+        android:layout_marginEnd="@dimen/margin20"
+        android:layout_marginTop="2dp"
+        android:layout_toEndOf="@id/cb"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="?attr/text_minor" />
+</RelativeLayout>

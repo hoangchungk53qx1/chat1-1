@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="wallet"
+        android:enabled="true"
+        android:icon="@mipmap/ic_adaptive_shortcut_wallet"
+        android:shortcutShortLabel="@string/Wallet">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="one.mixin.messenger"
+            android:targetClass="one.mixin.android.ui.wallet.WalletActivity" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="scan"
+        android:enabled="true"
+        android:icon="@mipmap/ic_adaptive_shortcut_scan"
+        android:shortcutShortLabel="@string/Scan">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="one.mixin.messenger"
+            android:targetClass="one.mixin.android.ui.qr.CaptureActivity" >
+
+            <extra android:name="args_show_scan" android:value="true" />
+            <extra android:name="args_shortcut" android:value="true" />
+        </intent>
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+
+    <share-target android:targetClass="one.mixin.messenger.ShareActivity">
+        <data android:mimeType="text/plain" />
+        <category android:name="one.mixin.android.directshare.category.TEXT_SHARE_TARGET" />
+    </share-target>
+    <share-target android:targetClass="one.mixin.messenger.ShareActivity">
+        <data android:mimeType="image/*" />
+        <category android:name="one.mixin.android.directshare.category.IMAGE_SHARE_TARGET" />
+    </share-target>
+
+    <share-target android:targetClass="one.mixin.messenger.ShareActivity">
+        <data android:mimeType="video/*" />
+        <category android:name="one.mixin.android.directshare.category.VIDEO_SHARE_TARGET" />
+    </share-target>
+
+    <share-target android:targetClass="one.mixin.messenger.ShareActivity">
+        <data android:mimeType="audio/*" />
+        <category android:name="one.mixin.android.directshare.category.AUDIO_SHARE_TARGET" />
+    </share-target>
+
+    <share-target android:targetClass="one.mixin.messenger.ShareActivity">
+        <data android:mimeType="application/*" />
+        <category android:name="one.mixin.android.directshare.category.APPLICATION_SHARE_TARGET" />
+    </share-target>
+</shortcuts>
